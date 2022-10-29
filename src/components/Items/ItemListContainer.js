@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {Container} from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import {getAllProducts, getProductsByCategory} from "../../utils/products";
@@ -25,9 +24,8 @@ const ItemListContainer = ({ greeting }) => {
 
     return (
         <Container>
-            <h1>Productos</h1>
-            <h3 className="greeting">{greeting}</h3>
-            <ItemList products={products}></ItemList>
+            <h1 className="greeting">{greeting}</h1>
+            <ItemList products={products}/>
         </Container>
     );
 }
